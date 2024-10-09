@@ -28,26 +28,26 @@ data-style="light">
   href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap"
   rel="stylesheet" />
 
-  <link rel="stylesheet" href="<?= base_url()?>assets/vendor/fonts/tabler-icons.css" />
-  <!-- <link rel="stylesheet" href="<?= base_url()?>assets/vendor/fonts/fontawesome.css" /> -->
-  <!-- <link rel="stylesheet" href="<?= base_url()?>assets/vendor/fonts/flag-icons.css" /> -->
+  <link rel="stylesheet" href="<?= base_url()?>assets/libs/fonts/tabler-icons.css" />
+  <!-- <link rel="stylesheet" href="<?= base_url()?>assets/libs/fonts/fontawesome.css" /> -->
+  <!-- <link rel="stylesheet" href="<?= base_url()?>assets/libs/fonts/flag-icons.css" /> -->
 
   <!-- Core CSS -->
 
-  <link rel="stylesheet" href="<?= base_url()?>assets/vendor/css/rtl/core.css" />
-  <link rel="stylesheet" href="<?= base_url()?>assets/vendor/css/rtl/theme-default.css" />
+  <link rel="stylesheet" href="<?= base_url()?>assets/libs/css/rtl/core.css" />
+  <link rel="stylesheet" href="<?= base_url()?>assets/libs/css/rtl/theme-default.css" />
 
   <link rel="stylesheet" href="<?= base_url()?>assets/css/demo.css" />
 
   <!-- Vendors CSS -->
-  <link rel="stylesheet" href="<?= base_url()?>assets/vendor/libs/node-waves/node-waves.css" />
+  <link rel="stylesheet" href="<?= base_url()?>assets/libs/libs/node-waves/node-waves.css" />
 
-  <link rel="stylesheet" href="<?= base_url()?>assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+  <link rel="stylesheet" href="<?= base_url()?>assets/libs/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
   <!-- Page CSS -->
 
   <!-- Helpers -->
-  <script src="<?= base_url()?>assets/vendor/js/helpers.js"></script>
+  <script src="<?= base_url()?>assets/libs/js/helpers.js"></script>
   <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
 
   <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
@@ -377,19 +377,19 @@ data-style="light">
       <!--/ Layout wrapper -->
 
       <!-- Core JS -->
-      <!-- build:js assets/vendor/js/core.js -->
+      <!-- build:js assets/libs/js/core.js -->
 
-      <script src="<?= base_url()?>assets/vendor/libs/jquery/jquery.js"></script>
-      <script src="<?= base_url()?>assets/vendor/libs/popper/popper.js"></script>
-      <script src="<?= base_url()?>assets/vendor/js/bootstrap.js"></script>
-      <script src="<?= base_url()?>assets/vendor/libs/node-waves/node-waves.js"></script>
-      <script src="<?= base_url()?>assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-      <script src="<?= base_url()?>assets/vendor/libs/hammer/hammer.js"></script>
+      <script src="<?= base_url()?>assets/libs/libs/jquery/jquery.js"></script>
+      <script src="<?= base_url()?>assets/libs/libs/popper/popper.js"></script>
+      <script src="<?= base_url()?>assets/libs/js/bootstrap.js"></script>
+      <script src="<?= base_url()?>assets/libs/libs/node-waves/node-waves.js"></script>
+      <script src="<?= base_url()?>assets/libs/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+      <script src="<?= base_url()?>assets/libs/libs/hammer/hammer.js"></script>
 
-      <script src="<?= base_url()?>assets/vendor/js/menu.js"></script>
+      <script src="<?= base_url()?>assets/libs/js/menu.js"></script>
 
       <script src="<?= base_url()?>assets/js/main.js"></script>
-      <script src="<?= base_url()?>assets/vendor/libs/apex-charts/apexcharts.js"></script>
+      <script src="<?= base_url()?>assets/libs/libs/apex-charts/apexcharts.js"></script>
 
       <script type="text/javascript">
       const rupiah = (number)=>{
