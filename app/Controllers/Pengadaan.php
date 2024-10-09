@@ -16,7 +16,7 @@ class Pengadaan extends BaseController
     {
       $client = service('curlrequest');
 
-      $response = $client->request('GET', 'http://localhost:8081/casn/dashboard/cpns', [
+      $response = $client->request('GET', 'https://ropeg.kemenag.go.id/apimws/casn/dashboard/cpns', [
           'headers' => [
               'Accept'        => 'application/json',
               'Content-Type' => 'application/json',
@@ -31,7 +31,7 @@ class Pengadaan extends BaseController
     {
       $client = service('curlrequest');
 
-      $response = $client->request('GET', 'http://localhost:8081/casn/dashboard/pppk', [
+      $response = $client->request('GET', 'https://ropeg.kemenag.go.id/apimws/casn/dashboard/pppk', [
           'headers' => [
               'Accept'        => 'application/json',
               'Content-Type' => 'application/json',
