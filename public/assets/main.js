@@ -32,7 +32,7 @@ var tabCarousel = setInterval(function() {
 
 $(document).ready(function() {
 
-   $.getJSON( siteurl+"pengadaan/cpns", function( data ) {
+   $.getJSON( "https://ropeg.kemenag.go.id/apimws/casn/dashboard/cpns", function( data ) {
      $('#cpns_jml_pendaftar').html(rupiah(data.data.jml_pendaftar));
      $('#cpns_jml_submit').html(rupiah(data.data.jml_submit));
      $('#cpns_jml_blm_verif').html(rupiah(data.data.jml_blm_verif));
@@ -41,7 +41,7 @@ $(document).ready(function() {
      $('#cpns_jml_tms').html(rupiah(data.data.jml_tms));
    });
 
-   // $.getJSON( siteurl+"pengadaan/pppk", function( data ) {
+   // $.getJSON( "https://ropeg.kemenag.go.id/apimws/casn/dashboard/pppk", function( data ) {
    //   $('#pppk_jml_pendaftar').html(rupiah(data.data.jml_pendaftar));
    //   $('#pppk_jml_submit').html(rupiah(data.data.jml_submit));
    //   $('#pppk_jml_blm_verif').html(rupiah(data.data.jml_blm_verif));

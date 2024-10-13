@@ -21,7 +21,7 @@ class Pengadaan extends BaseController
               'Accept'        => 'application/json',
               'Content-Type' => 'application/json',
           ],
-          'verify' => false
+          // 'verify' => false
       ]);
 
       return $this->response->setJSON($response->getBody());
