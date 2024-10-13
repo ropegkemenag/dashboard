@@ -60,9 +60,19 @@ class CrudModel extends Model
         return $query;
       }
 
-      public function searchKabupaten($search)
+      public function getKpSatker()
       {
-        $query = $this->db->query("SELECT TOP 20 id_kab AS id,nama AS text FROM TM_KABUPATEN WHERE nama LIKE '%$search%'")->getResult();
+        $query = $this->db->query("SELECT satker,COUNT(id) AS jumlah FROM
+                                  (SELECT
+                                  	siasn_kp.*,
+                                  	b.SATKER_4 AS satker
+                                  FROM
+                                  	dbo.siasn_kp
+                                  	INNER JOIN
+                                  	simpeg_2024..TEMP_PEGAWAI b
+                                  	ON
+                                  		siasn_kp.nipBaru = b.NIP_BARU) siasn
+                                  GROUP BY satker ORDER BY jumlah DESC")->getResult();
         return $query;
       }
 

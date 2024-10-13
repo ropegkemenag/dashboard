@@ -20,6 +20,7 @@ class Home extends BaseController
       $data['kpjumlah'] = $model->getKp();
       $data['kpstatus'] = $model->getKpStatus();
       $data['kpjenis'] = $model->getKpJenis();
+      $data['kpsatker'] = $model->getKpSatker();
 
       return view('index', $data);
     }

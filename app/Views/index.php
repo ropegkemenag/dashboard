@@ -43,6 +43,8 @@ data-style="light">
   <link rel="stylesheet" href="<?= base_url()?>assets/libs/libs/node-waves/node-waves.css" />
 
   <link rel="stylesheet" href="<?= base_url()?>assets/libs/libs/perfect-scrollbar/perfect-scrollbar.css" />
+  <link rel="stylesheet" href="<?= base_url()?>assets/libs/libs/swiper/swiper.css">
+  <link rel="stylesheet" href="<?= base_url()?>assets/libs/css/pages/cards-advance.css">
 
   <!-- Page CSS -->
 
@@ -112,610 +114,75 @@ data-style="light">
 
             <div class="tab-content p-0">
               <div class="tab-pane fade show active" id="navs-simpeg" role="tabpanel">
-                <div class="row">
-                  <div class="col-6">
-                    <div class="col-xl-12">
-                      <div class="card h-100">
-                        <div class="card-body d-flex justify-content-between">
-                          <div class="d-flex flex-column">
-                            <div class="card-title mb-auto">
-                              <h5 class="mb-0 text-nowrap">Jumlah Pegawai</h5>
-                            </div>
-                            <div class="chart-statistics">
-                              <h3 class="card-title mb-0"><?= rupiah($djk[0]->JUMLAH+$djk[1]->JUMLAH) ?></h3>
-                            </div>
-                          </div>
-                          <div id="generatedLeadsChart"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="card card-border-shadow-primary h-100">
-                      <div class="card-body">
-                        <div class="d-flex align-items-center mb-2">
-                          <div class="avatar me-4">
-                            <span class="avatar-initial rounded bg-label-primary"><i class="ti ti-truck ti-28px"></i></span>
-                            </div>
-                            <h4 class="mb-0" id="simpeg_pns">0</h4>
-                          </div>
-                          <p class="mb-1">PNS</p>
-                        </div>
-                      </div>
-                    </div>
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="card card-border-shadow-primary h-100">
-                      <div class="card-body">
-                        <div class="d-flex align-items-center mb-2">
-                          <div class="avatar me-4">
-                            <span class="avatar-initial rounded bg-label-primary"><i class="ti ti-truck ti-28px"></i></span>
-                            </div>
-                            <h4 class="mb-0" id="simpeg_pppk">0</h4>
-                          </div>
-                          <p class="mb-1">PPPK</p>
-                        </div>
-                      </div>
-                    </div>
-                    </div>
+                <?= $this->include('pages/simpeg')?>
 
 
               </div>
               <div class="tab-pane fade" id="navs-pengadaan" role="tabpanel">
-                <div class="row">
-                  <h5 class="mb-2">Statistik Pelamar<span class="h4"> CPNS SSCASN 2024</span></h5>
-                  <div class="col-lg-3 col-sm-6">
-                    <div class="card card-border-shadow-primary h-100">
-                      <div class="card-body">
-                        <div class="d-flex align-items-center mb-2">
-                          <div class="avatar me-4">
-                            <span class="avatar-initial rounded bg-label-primary"><i class="ti ti-truck ti-28px"></i></span>
-                            </div>
-                            <h4 class="mb-0" id="cpns_jml_pendaftar">0</h4>
-                          </div>
-                          <p class="mb-1">Jumlah Pendaftar</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                      <div class="card card-border-shadow-warning h-100">
-                        <div class="card-body">
-                          <div class="d-flex align-items-center mb-2">
-                            <div class="avatar me-4">
-                              <span class="avatar-initial rounded bg-label-warning"
-                              ><i class="ti ti-alert-triangle ti-28px"></i
-                                ></span>
-                              </div>
-                              <h4 class="mb-0" id="cpns_jml_submit">0</h4>
-                            </div>
-                            <p class="mb-1">Jumlah Submit</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-2 col-sm-6">
-                        <div class="card card-border-shadow-danger h-100">
-                          <div class="card-body">
-                            <div class="d-flex align-items-center mb-2">
-                              <div class="avatar me-4">
-                                <span class="avatar-initial rounded bg-label-danger"
-                                ><i class="ti ti-git-fork ti-28px"></i
-                                  ></span>
-                                </div>
-                                <h4 class="mb-0" id="cpns_jml_ms">0</h4>
-                              </div>
-                              <p class="mb-1">Jumlah MS</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-2 col-sm-6">
-                          <div class="card card-border-shadow-info h-100">
-                            <div class="card-body">
-                              <div class="d-flex align-items-center mb-2">
-                                <div class="avatar me-4">
-                                  <span class="avatar-initial rounded bg-label-info"><i class="ti ti-clock ti-28px"></i></span>
-                                </div>
-                                <h4 class="mb-0" id="cpns_jml_tms">0</h4>
-                              </div>
-                              <p class="mb-1">Jumlah TMS</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-2 col-sm-6">
-                          <div class="card card-border-shadow-info h-100">
-                            <div class="card-body">
-                              <div class="d-flex align-items-center mb-2">
-                                <div class="avatar me-4">
-                                  <span class="avatar-initial rounded bg-label-info"><i class="ti ti-clock ti-28px"></i></span>
-                                </div>
-                                <h4 class="mb-0" id="cpns_jml_blm_verif">0</h4>
-                              </div>
-                              <p class="mb-1">Jumlah Belum Verif</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row mt-5">
-                        <div class="col-xxl-12 col-lg-12">
-                  <div class="card h-100">
-                    <div class="card-header d-flex align-items-center justify-content-between">
-                      <h5 class="card-title m-0 me-2">Top Satker</h5>
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-text-secondary rounded-pill text-muted border-0 p-2 me-n1"
-                          type="button"
-                          id="topCourses"
-                          data-bs-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false">
-                          <i class="ti ti-dots-vertical ti-md text-muted"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="topCourses">
-                          <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-                          <a class="dropdown-item" href="javascript:void(0);">Download</a>
-                          <a class="dropdown-item" href="javascript:void(0);">View All</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <table class="table table-striped">
-                        <thead>
-                          <tr>
-                            <th>#</th>
-                            <th>Satuan Kerja</th>
-                            <th>Pelamar</th>
-                          </tr>
-                        </thead>
-                        <tbody class="table-border-bottom-0">
-                          <?php
-                          $no = 1;
-                          foreach ($cpnssatker as $row) {?>
-                            <tr>
-                              <td><span class="badge badge-center rounded-pill bg-label-primary"><?= $no?></span></td>
-                              <td><?= $row->lok_formasi_nm?></td>
-                              <td><?= rupiah($row->jumlah)?></td>
-                            </tr>
-                          <?php $no++; } ?>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-                      </div>
-                    </div>
-                    <div class="tab-pane fade" id="navs-kp" role="tabpanel">
-                      <div class="row">
-                        <h5 class="mb-2">Usul Kenaikan Pangkat<span class="h4"> Periode Desember 2024</span></h5>
-                        <div class="col-lg-3 col-sm-6">
-                          <div class="card card-border-shadow-primary h-100">
-                            <div class="card-body">
-                              <div class="d-flex align-items-center mb-2">
-                                <div class="avatar me-4">
-                                  <span class="avatar-initial rounded bg-label-primary"><i class="ti ti-truck ti-28px"></i></span>
-                                  </div>
-                                  <h4 class="mb-0"><?= rupiah($kpjumlah->jumlah)?></h4>
-                                </div>
-                                <p class="mb-1">Jumlah Usul</p>
-                              </div>
-                            </div>
-                          </div>
-                        <div class="col-lg-3 col-sm-6">
-                          <div class="card card-border-shadow-primary h-100">
-                            <div class="card-body">
-                              <div class="d-flex align-items-center mb-2">
-                                <div class="avatar me-4">
-                                  <span class="avatar-initial rounded bg-label-primary"><i class="ti ti-truck ti-28px"></i></span>
-                                  </div>
-                                  <h4 class="mb-0"><?= rupiah($kpjumlah->jumlah)?></h4>
-                                </div>
-                                <p class="mb-1">Sdh di TTD - Pertek</p>
-                              </div>
-                            </div>
-                          </div>
-                        <div class="col-lg-3 col-sm-6">
-                          <div class="card card-border-shadow-primary h-100">
-                            <div class="card-body">
-                              <div class="d-flex align-items-center mb-2">
-                                <div class="avatar me-4">
-                                  <span class="avatar-initial rounded bg-label-primary"><i class="ti ti-truck ti-28px"></i></span>
-                                  </div>
-                                  <h4 class="mb-0"><?= rupiah($kpjumlah->jumlah)?></h4>
-                                </div>
-                                <p class="mb-1">Pembuatan SK Berhasil</p>
-                              </div>
-                            </div>
-                          </div>
-                        <div class="col-lg-3 col-sm-6">
-                          <div class="card card-border-shadow-primary h-100">
-                            <div class="card-body">
-                              <div class="d-flex align-items-center mb-2">
-                                <div class="avatar me-4">
-                                  <span class="avatar-initial rounded bg-label-primary"><i class="ti ti-truck ti-28px"></i></span>
-                                  </div>
-                                  <h4 class="mb-0"><?= rupiah($kpjumlah->jumlah)?></h4>
-                                </div>
-                                <p class="mb-1">Menunggu SK Paraf / TTE</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <!--/ Content -->
-
-                <!-- Footer -->
-                <footer class="content-footer footer bg-footer-theme">
-                  <div class="container-xxl">
-                    <div
-                    class="footer-container d-flex align-items-center justify-content-between py-4 flex-md-row flex-column">
-                    <div class="text-body">
-                      ©
-                      <script>
-                      document.write(new Date().getFullYear());
-                      </script>
-                      , made with ❤️ by <a href="https://ropeg.kemenag.go.id" target="_blank" class="footer-link">Biro Kepegawaian</a>
-                    </div>
-                  </div>
-                </div>
-              </footer>
-              <!-- / Footer -->
-
-              <div class="content-backdrop fade"></div>
+                <?= $this->include('pages/pengadaan')?>
+              </div>
+              <div class="tab-pane fade" id="navs-kp" role="tabpanel">
+                <?= $this->include('pages/kp')?>
+              </div>
             </div>
-            <!--/ Content wrapper -->
           </div>
+          <!--/ Content -->
 
-          <!--/ Layout container -->
-        </div>
+          <!-- Footer -->
+          <footer class="content-footer footer bg-footer-theme">
+            <div class="container-xxl">
+              <div
+              class="footer-container d-flex align-items-center justify-content-between py-4 flex-md-row flex-column">
+              <div class="text-body">
+                ©
+                <script>
+                document.write(new Date().getFullYear());
+                </script>
+                , made with ❤️ by <a href="https://ropeg.kemenag.go.id" target="_blank" class="footer-link">Biro Kepegawaian</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- / Footer -->
+
+        <div class="content-backdrop fade"></div>
       </div>
+      <!--/ Content wrapper -->
+    </div>
 
-      <!-- Overlay -->
-      <div class="layout-overlay layout-menu-toggle"></div>
+    <!--/ Layout container -->
+  </div>
+</div>
 
-      <!-- Drag Target Area To SlideIn Menu On Small Screens -->
-      <div class="drag-target"></div>
+<!-- Overlay -->
+<div class="layout-overlay layout-menu-toggle"></div>
 
-      <!--/ Layout wrapper -->
+<!-- Drag Target Area To SlideIn Menu On Small Screens -->
+<div class="drag-target"></div>
 
-      <!-- Core JS -->
-      <!-- build:js assets/libs/js/core.js -->
+<!--/ Layout wrapper -->
 
-      <script src="<?= base_url()?>assets/libs/libs/jquery/jquery.js"></script>
-      <script src="<?= base_url()?>assets/libs/libs/popper/popper.js"></script>
-      <script src="<?= base_url()?>assets/libs/js/bootstrap.js"></script>
-      <script src="<?= base_url()?>assets/libs/libs/node-waves/node-waves.js"></script>
-      <script src="<?= base_url()?>assets/libs/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-      <script src="<?= base_url()?>assets/libs/libs/hammer/hammer.js"></script>
+<!-- Core JS -->
+<!-- build:js assets/libs/js/core.js -->
 
-      <script src="<?= base_url()?>assets/libs/js/menu.js"></script>
+<script src="<?= base_url()?>assets/libs/libs/jquery/jquery.js"></script>
+<script src="<?= base_url()?>assets/libs/libs/popper/popper.js"></script>
+<script src="<?= base_url()?>assets/libs/js/bootstrap.js"></script>
+<script src="<?= base_url()?>assets/libs/libs/node-waves/node-waves.js"></script>
+<script src="<?= base_url()?>assets/libs/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="<?= base_url()?>assets/libs/libs/hammer/hammer.js"></script>
 
-      <script src="<?= base_url()?>assets/js/main.js"></script>
-      <script src="<?= base_url()?>assets/libs/libs/apex-charts/apexcharts.js"></script>
+<script src="<?= base_url()?>assets/libs/js/menu.js"></script>
 
-      <script type="text/javascript">
-      const rupiah = (number)=>{
-        return new Intl.NumberFormat('id-ID').format(number)
-      }
+<script src="<?= base_url()?>assets/js/main.js"></script>
+<script src="<?= base_url()?>assets/libs/libs/apex-charts/apexcharts.js"></script>
+<script src="<?= base_url()?>assets/libs/libs/swiper/swiper.js"></script>
 
-      const chartColors = {
-        donut: {
-          series1: '#24B364',
-          series2: '#53D28C',
-          series3: '#7EDDA9',
-          series4: '#A9E9C5'
-        }
-      };
+<script type="text/javascript">
+var siteurl = '<?= site_url()?>';
+</script>
+<script src="<?= base_url()?>assets/tablebuild.js"></script>
+<script src="<?= base_url()?>assets/main.js"></script>
 
-      let cardColor, labelColor, headingColor, borderColor, legendColor;
-
-      cardColor = config.colors.cardColor;
-      labelColor = config.colors.textMuted;
-      legendColor = config.colors.bodyColor;
-      headingColor = config.colors.headingColor;
-      borderColor = config.colors.borderColor;
-
-      var tabCarousel = setInterval(function() {
-    	    var tabs = $('.nav-pills > li'),
-    	        tabsb = $('.nav-pills > li > button'),
-    	        active = tabsb.filter('.active'),
-    	        next = active.parent().next('li'),
-    	        toClick = next.length ? next.find('button') : tabs.eq(0).find('button');
-
-    	    toClick.trigger('click');
-    	}, 10000);
-
-      $(document).ready(function() {
-
-         $.getJSON( "<?= site_url('pengadaan/cpns')?>", function( data ) {
-           $('#cpns_jml_pendaftar').html(rupiah(data.data.jml_pendaftar));
-           $('#cpns_jml_submit').html(rupiah(data.data.jml_submit));
-           $('#cpns_jml_blm_verif').html(rupiah(data.data.jml_blm_verif));
-           $('#cpns_jml_formasi').html(rupiah(data.data.jml_formasi));
-           $('#cpns_jml_ms').html(rupiah(data.data.jml_ms));
-           $('#cpns_jml_tms').html(rupiah(data.data.jml_tms));
-         });
-
-         $.getJSON( "<?= site_url('pengadaan/pppk')?>", function( data ) {
-           $('#pppk_jml_pendaftar').html(rupiah(data.data.jml_pendaftar));
-           $('#pppk_jml_submit').html(rupiah(data.data.jml_submit));
-           $('#pppk_jml_blm_verif').html(rupiah(data.data.jml_blm_verif));
-           $('#pppk_jml_formasi').html(rupiah(data.data.jml_formasi));
-           $('#pppk_jml_ms').html(rupiah(data.data.jml_ms));
-           $('#pppk_jml_tms').html(rupiah(data.data.jml_tms));
-         });
-      });
-
-      const generatedLeadsChartEl = document.querySelector('#generatedLeadsChart'),
-    generatedLeadsChartConfig = {
-      chart: {
-        height: 125,
-        width: 120,
-        parentHeightOffset: 0,
-        type: 'donut'
-      },
-      labels: ['Laki-Laki', 'Perempuan'],
-      series: [<?= rupiah($djk[0]->JUMLAH) ?>, <?= rupiah($djk[1]->JUMLAH) ?>],
-      colors: [
-        chartColors.donut.series1,
-        chartColors.donut.series2
-      ],
-      stroke: {
-        width: 0
-      },
-      dataLabels: {
-        enabled: false,
-        formatter: function (val, opt) {
-          return parseInt(val) + '%';
-        }
-      },
-      legend: {
-        show: false
-      },
-      tooltip: {
-        theme: false
-      },
-      grid: {
-        padding: {
-          top: 15,
-          right: -20,
-          left: -20
-        }
-      },
-      states: {
-        hover: {
-          filter: {
-            type: 'none'
-          }
-        }
-      },
-      plotOptions: {
-        pie: {
-          donut: {
-            size: '70%',
-            labels: {
-              show: true,
-              value: {
-                fontSize: '1.5rem',
-                fontFamily: 'Public Sans',
-                color: headingColor,
-                fontWeight: 500,
-                offsetY: -15,
-                formatter: function (val) {
-                  return parseInt(val) + '%';
-                }
-              },
-              name: {
-                offsetY: 20,
-                fontFamily: 'Public Sans'
-              },
-              total: {
-                show: true,
-                showAlways: true,
-                color: config.colors.success,
-                fontSize: '.4125rem',
-                label: 'Total',
-                fontFamily: 'Public Sans',
-                formatter: function (w) {
-                  return '<?= rupiah($djk[0]->JUMLAH+$djk[1]->JUMLAH) ?>';
-                }
-              }
-            }
-          }
-        }
-      },
-      responsive: [
-        {
-          breakpoint: 1025,
-          options: {
-            chart: {
-              height: 172,
-              width: 160
-            }
-          }
-        },
-        {
-          breakpoint: 769,
-          options: {
-            chart: {
-              height: 178
-            }
-          }
-        },
-        {
-          breakpoint: 426,
-          options: {
-            chart: {
-              height: 147
-            }
-          }
-        }
-      ]
-    };
-  if (typeof generatedLeadsChartEl !== undefined && generatedLeadsChartEl !== null) {
-    const generatedLeadsChart = new ApexCharts(generatedLeadsChartEl, generatedLeadsChartConfig);
-    generatedLeadsChart.render();
-  }
-
-  const revenueGrowthEl = document.querySelector('#revenueGrowth'),
-    revenueGrowthConfig = {
-      chart: {
-        height: 170,
-        type: 'bar',
-        parentHeightOffset: 0,
-        toolbar: {
-          show: false
-        }
-      },
-      plotOptions: {
-        bar: {
-          barHeight: '80%',
-          columnWidth: '30%',
-          startingShape: 'rounded',
-          endingShape: 'rounded',
-          borderRadius: 6,
-          distributed: true
-        }
-      },
-      tooltip: {
-        enabled: false
-      },
-      grid: {
-        show: false,
-        padding: {
-          top: -20,
-          bottom: -12,
-          left: -10,
-          right: 0
-        }
-      },
-      colors: [
-        config.colors_label.success,
-        config.colors_label.success,
-        config.colors_label.success,
-        config.colors_label.success,
-        config.colors.success,
-        config.colors_label.success,
-        config.colors_label.success
-      ],
-      dataLabels: {
-        enabled: false
-      },
-      series: [
-        {
-          data: [25, 40, 55, 70, 85, 70, 55]
-        }
-      ],
-      legend: {
-        show: false
-      },
-      xaxis: {
-        categories: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-        axisBorder: {
-          show: false
-        },
-        axisTicks: {
-          show: false
-        },
-        labels: {
-          style: {
-            colors: labelColor,
-            fontSize: '13px',
-            fontFamily: 'Public Sans'
-          }
-        }
-      },
-      yaxis: {
-        labels: {
-          show: false
-        }
-      },
-      states: {
-        hover: {
-          filter: {
-            type: 'none'
-          }
-        }
-      },
-      responsive: [
-        {
-          breakpoint: 1471,
-          options: {
-            plotOptions: {
-              bar: {
-                columnWidth: '50%'
-              }
-            }
-          }
-        },
-        {
-          breakpoint: 1350,
-          options: {
-            plotOptions: {
-              bar: {
-                columnWidth: '57%'
-              }
-            }
-          }
-        },
-        {
-          breakpoint: 1032,
-          options: {
-            plotOptions: {
-              bar: {
-                columnWidth: '60%'
-              }
-            }
-          }
-        },
-        {
-          breakpoint: 992,
-          options: {
-            plotOptions: {
-              bar: {
-                columnWidth: '40%',
-                borderRadius: 8
-              }
-            }
-          }
-        },
-        {
-          breakpoint: 855,
-          options: {
-            plotOptions: {
-              bar: {
-                columnWidth: '50%',
-                borderRadius: 6
-              }
-            }
-          }
-        },
-        {
-          breakpoint: 440,
-          options: {
-            plotOptions: {
-              bar: {
-                columnWidth: '40%'
-              }
-            }
-          }
-        },
-        {
-          breakpoint: 381,
-          options: {
-            plotOptions: {
-              bar: {
-                columnWidth: '45%'
-              }
-            }
-          }
-        }
-      ]
-    };
-  if (typeof revenueGrowthEl !== undefined && revenueGrowthEl !== null) {
-    const revenueGrowth = new ApexCharts(revenueGrowthEl, revenueGrowthConfig);
-    revenueGrowth.render();
-  }
-
-      </script>
-
-    </body>
-    </html>
+</body>
+</html>

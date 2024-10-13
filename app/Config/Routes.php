@@ -8,3 +8,4 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('pengadaan/cpns', 'Pengadaan::cpns');
 $routes->get('pengadaan/pppk', 'Pengadaan::pppk');
+$routes->get('simpeg', 'Simpeg::index');

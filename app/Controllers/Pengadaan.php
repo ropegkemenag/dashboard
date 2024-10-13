@@ -20,7 +20,8 @@ class Pengadaan extends BaseController
           'headers' => [
               'Accept'        => 'application/json',
               'Content-Type' => 'application/json',
-          ]
+          ],
+          'verify' => false
       ]);
 
       return $this->response->setJSON($response->getBody());
@@ -34,7 +35,8 @@ class Pengadaan extends BaseController
           'headers' => [
               'Accept'        => 'application/json',
               'Content-Type' => 'application/json',
-          ]
+          ],
+          'verify' => false
       ]);
 
       return $this->response->setJSON($response->getBody());
