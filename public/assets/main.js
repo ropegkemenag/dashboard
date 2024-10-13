@@ -32,7 +32,7 @@ var tabCarousel = setInterval(function() {
 
 $(document).ready(function() {
 
-   $.getJSON( siteurl+"/pengadaan/cpns", function( data ) {
+   $.getJSON( siteurl+"pengadaan/cpns", function( data ) {
      $('#cpns_jml_pendaftar').html(rupiah(data.data.jml_pendaftar));
      $('#cpns_jml_submit').html(rupiah(data.data.jml_submit));
      $('#cpns_jml_blm_verif').html(rupiah(data.data.jml_blm_verif));
@@ -41,14 +41,14 @@ $(document).ready(function() {
      $('#cpns_jml_tms').html(rupiah(data.data.jml_tms));
    });
 
-   $.getJSON( siteurl+"pengadaan/pppk", function( data ) {
-     $('#pppk_jml_pendaftar').html(rupiah(data.data.jml_pendaftar));
-     $('#pppk_jml_submit').html(rupiah(data.data.jml_submit));
-     $('#pppk_jml_blm_verif').html(rupiah(data.data.jml_blm_verif));
-     $('#pppk_jml_formasi').html(rupiah(data.data.jml_formasi));
-     $('#pppk_jml_ms').html(rupiah(data.data.jml_ms));
-     $('#pppk_jml_tms').html(rupiah(data.data.jml_tms));
-   });
+   // $.getJSON( siteurl+"pengadaan/pppk", function( data ) {
+   //   $('#pppk_jml_pendaftar').html(rupiah(data.data.jml_pendaftar));
+   //   $('#pppk_jml_submit').html(rupiah(data.data.jml_submit));
+   //   $('#pppk_jml_blm_verif').html(rupiah(data.data.jml_blm_verif));
+   //   $('#pppk_jml_formasi').html(rupiah(data.data.jml_formasi));
+   //   $('#pppk_jml_ms').html(rupiah(data.data.jml_ms));
+   //   $('#pppk_jml_tms').html(rupiah(data.data.jml_tms));
+   // });
 
    $.getJSON( siteurl+"simpeg", function( data ) {
      $('#jumlahpegawai').html(rupiah(parseInt(data.jf.JUMLAH) + parseInt(data.jm.JUMLAH)));
