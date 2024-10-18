@@ -32,6 +32,8 @@ var tabCarousel = setInterval(function() {
 
 $(document).ready(function() {
 
+  // setInterval(displayHello, 1000);
+
    $.getJSON( "https://ropeg.kemenag.go.id/apimws/casn/dashboard/cpns", function( data ) {
      $('#cpns_jml_pendaftar').html(rupiah(data.data.jml_pendaftar));
      $('#cpns_jml_submit').html(rupiah(data.data.jml_submit));

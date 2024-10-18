@@ -180,6 +180,10 @@ data-style="light">
 
 <script type="text/javascript">
 var siteurl = '<?= site_url()?>';
+
+setTimeout(function(){
+    location = ''
+  },1800000)
 </script>
 <script src="<?= base_url()?>assets/tablebuild.js"></script>
 <script src="<?= base_url()?>assets/main.js"></script>
